@@ -87,9 +87,7 @@ class ArticleCategoryController extends AdminController
             ->attribute('maxlength', 255);
         $form->number('sort_order', __('Sort order'))->default(0)->min(0);
         $form->image('image', __('Image'))
-            ->uniqueName()
             ->move("images/posts")
-            ->resize(400, 200)
             ->removable();
         $form->textarea('summary', __('Summary'));
         $form->saving(function (Form $form) {
