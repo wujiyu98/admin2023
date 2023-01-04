@@ -103,7 +103,7 @@ class SiteInfoController extends AdminController
         $form->text('qq', __('Qq'));
         $form->text('whatsapp', __('Whatsapp'));
         $form->text('address', __('Address'));
-        $form->textarea('summary', __('Summary'))->attribute("maxlength", 500);
+        $form->textarea('summary', __('Summary'))->attribute("maxlength", 2000);
 
         return $form;
     }
