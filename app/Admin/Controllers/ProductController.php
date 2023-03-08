@@ -48,6 +48,7 @@ class ProductController extends AdminController
         $grid->model()->orderBy('id', 'desc');
         $grid->column('id', __('Id'));
         $grid->column('title', __('Title'))->width(200);
+        $grid->column('image')->image("", 50, 50);
         $grid->column('language_id', __('Language id'));
         $grid->column('manufacturer_id', __('Manufacturer id'));
         $grid->column('price', __('Price'));
