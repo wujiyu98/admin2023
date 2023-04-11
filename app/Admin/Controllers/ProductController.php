@@ -156,7 +156,7 @@ class ProductController extends AdminController
                 $form->text('value', __('Value'));
             });
         })->tab("内容编辑", function ($form) {
-            $form->textarea('content', __('Content'));
+            $form->summernote('content', __('Content'));
         });
 
         $form->saving(function (Form $form) {

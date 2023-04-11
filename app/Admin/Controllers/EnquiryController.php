@@ -35,6 +35,8 @@ class EnquiryController extends AdminController
             $filter->equal('country', __("Country"));
         });
 
+        $grid->model()->orderBy("id", "desc");
+
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'));

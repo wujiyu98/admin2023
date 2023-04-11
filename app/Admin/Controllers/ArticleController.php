@@ -33,6 +33,8 @@ class ArticleController extends AdminController
             $filter->equal('article_category_id', __("Select category"))->select(ArticleCategory::pluck('name', "id"));
         });
 
+        $grid->model()->orderBy("id", "desc");
+
 
         $grid->column('id', __('Id'));
 
