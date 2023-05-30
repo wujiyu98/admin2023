@@ -29,14 +29,12 @@ class SiteInfoController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
-        $grid->column('deleted_at', __('Deleted at'));
         $grid->column('language_id', __('Language id'))->display(function ($langID) {
             return Language::where('id', $langID)->first()->name;
         });
         $grid->column('site_name', __('Site name'));
         $grid->column('email', __('Email'));
-        $grid->column('company', __('Company'));
+
         $grid->column('contact', __('Contact'));
         $grid->column('phone', __('Phone'));
         $grid->column('phone2', __('Phone2'));
@@ -44,7 +42,7 @@ class SiteInfoController extends AdminController
         $grid->column('skype', __('Skype'));
         $grid->column('qq', __('Qq'));
         $grid->column('whatsapp', __('Whatsapp'));
-        $grid->column('address', __('Address'));
+
 
         return $grid;
     }

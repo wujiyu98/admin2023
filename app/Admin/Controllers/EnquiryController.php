@@ -33,6 +33,7 @@ class EnquiryController extends AdminController
             $filter->equal('email', __("Email"));
             $filter->equal('name', __("Name"));
             $filter->equal('country', __("Country"));
+            $filter->date('created_at', __("Created at"));
         });
 
         $grid->model()->orderBy("id", "desc");

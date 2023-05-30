@@ -29,6 +29,11 @@ class MessageController extends AdminController
         $grid->disableCreateButton();
         $grid->disableActions();
 
+        $grid->filter(function ($filter) {
+            $filter->equal('email', __("Email"));
+            $filter->date('created_at', __("Created at"));
+        });
+
         $grid->model()->orderBy("id", "desc");
 
         $grid->column('id', __('Id'));

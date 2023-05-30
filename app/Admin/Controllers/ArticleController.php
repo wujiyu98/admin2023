@@ -42,8 +42,7 @@ class ArticleController extends AdminController
         $grid->column('pathname', __('Pathname'));
         $grid->column('sort_order', __('Sort order'));
         $grid->column('showed', __('Showed'));
-        $grid->column('summary', __('Summary'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image("", 50, 50);
         $grid->column('author', __('Author'));
         $grid->column('created_at', __('Created at'))->display(function ($created_at) {
 
